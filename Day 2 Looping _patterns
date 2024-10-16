@@ -1,0 +1,562 @@
+Leap year
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int year;
+    cout<<"Enter the year:";
+    cin>>year;
+    if((year%4==0 && year%100!=0)||year%400==0)
+    {
+        cout<<"this year"<<year<<"is a leap year";
+    }
+    else
+    {
+        cout<<"This year "<<year<<" is not a leap year";
+    }
+    return 0;
+}
+-------------------------------------------------------------------------------------------------------------------------
+Arthimatic Expression
+
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int a=sc.nextInt();
+        int b=sc.nextInt();
+        int c=sc.nextInt();
+        double delta=Math.pow(b,2)-4*a*c;
+        if(delta>=0)
+        {
+            double root1= (-b+Math.sqrt(delta))/2*a;
+            double root2= (-b-Math.sqrt(delta))/2*a;
+            System.out.println("Root 1:"+root1+"Root 2:"+root2);
+        }
+        else
+        {
+            System.out.println("No Real Roots");
+        }
+    }
+}
+---------------------------------------------------------------------------
+pattern -4x4 using "*"
+
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int row=sc.nextInt();
+        int col=sc.nextInt();
+        for(int i=1;i<=row;i++)
+        {
+            for(int j=1;j<=col;j++)
+            {
+                System.out.print("*");
+            }
+            System.out.println(" ");
+        }
+    }
+}
+
+o/p
+****
+****
+****
+****
+
+--------------------------------------------------------------------
+pattern - 4x4
+o/p
+          * * * *
+          *     *
+          *     *
+          * * * *
+
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int row=sc.nextInt();
+        int col=sc.nextInt();
+        for(int i=1;i<=row;i++)
+        {
+            for(int j=1;j<=col;j++)
+            {
+                if(i==1||j==1||i==row||j==col)
+                {
+                    System.out.print("*");
+                }
+                else
+                {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println(" ");
+        }
+    }
+}
+-------------------------------------------------------------------------
+pattern o/p
+            *
+            * *
+            * * *
+            * * * *
+
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int row=sc.nextInt();
+        int col=sc.nextInt();
+        for(int i=1;i<=row;i++)
+        {
+            for(int j=1;j<=col;j++)
+            {
+                System.out.print("*");
+            }
+            System.out.println(" ");
+        }
+    }
+}
+---------------------------------------------------------------
+patterns-
+    1 
+    2 4 
+    3 5 7 
+    6 8 10 12 
+
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int row=4;
+        int col=4;
+        int c1=1;
+        int c2=2;
+        for(int i=1;i<=row;i++)
+        {
+            for(int j=1;j<=i;j++)
+            {
+                if(i%2!=0)
+                {
+                    System.out.print(c1);
+                    c1+=2;
+                }
+                else
+                {
+                    System.out.print(c2);
+                    c2+=2;
+                }
+            }
+            System.out.println(" ");
+        }
+    }
+}
+------------------------------------------------------
+    * * * * 
+    * * * 
+    * * 
+    * 
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int row=4;
+        for(int i=row;i>=1;i--)
+        {
+            for(int j=1;j<=i;j++)
+            {
+                System.out.print("*");
+            }
+            System.out.println(" ");
+        }
+    }
+}
+---------------------------------------------------
+  
+          * 
+         * * 
+        * * * 
+
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int row=4;
+        for(int i=1;i<=row;i++)
+        {
+            for(int k=1;k<=row-i;k++)
+            {
+                System.out.print(" ");
+            }
+            for(int j=1;j<i;j++)
+            {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+}
+-------------------------------------------------------------------
+            *      *
+            **    **
+            ***  ***
+            ********
+
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int row=4;
+        for(int i=1;i<=row;i++)
+        {
+            for(int h=1;h<=i;h++)
+            {
+                System.out.print("*");
+            }
+            for(int k=1;k<=2*(row-i);k++)
+            {
+                System.out.print(" ");
+            }
+            for(int j=1;j<=i;j++)
+            {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+---------------------------------------------------------------------
+            ********
+            ***  ***
+            **    **
+            *      *
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int row=4;
+        for(int i=row;i>=1;i--)
+        {
+            for(int h=1;h<=i;h++)
+            {
+                System.out.print("*");
+            }
+            for(int k=1;k<=2*(row-i);k++)
+            {
+                System.out.print(" ");
+            }
+            for(int j=1;j<=i;j++)
+            {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+---------------------------------------------
+Butterfly 
+        *      *
+        **    **
+        ***  ***
+        ********
+        ***  ***
+        **    **
+        *      *
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int row=4;
+        for(int i=1;i<row;i++)
+        {
+            for(int h=1;h<=i;h++)
+            {
+                System.out.print("*");
+            }
+            for(int k=1;k<=2*(row-i);k++)
+            {
+                System.out.print(" ");
+            }
+            for(int j=1;j<=i;j++)
+            {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        for(int i=row;i>=1;i--) 
+        {
+            for(int h=1;h<=i;h++)
+            {
+                System.out.print("*");
+            }
+            for(int k=1;k<=2*(row-i);k++)
+            {
+                System.out.print(" ");
+            }
+            for(int j=1;j<=i;j++)
+            {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+---------------------------------------------------------------------------------
+
+               * 
+              ** 
+             *** 
+            **** 
+             *** 
+              ** 
+               * 
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int row=4;
+        for(int i=1;i<row;i++)
+        {
+            for(int k=1;k<=(row-i);k++)
+            {
+                System.out.print(" ");
+            }
+            for(int j=1;j<=i;j++)
+            {
+                System.out.print("*");
+            }
+            System.out.println(" ");
+        }
+        for(int i=row;i>=1;i--)
+        {
+            for(int k=1;k<=(row-i);k++)
+            {
+                System.out.print(" ");
+            }
+            for(int j=1;j<=i;j++)
+            {
+                System.out.print("*");
+            }
+            System.out.println(" ");
+        }
+    }
+}
+--------------------------------------------------------------------
+Rhombus
+               **** 
+              **** 
+             **** 
+            **** 
+
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int row=4;
+        for(int i=1;i<=row;i++)
+        {
+        for(int j=1;j<=row-i;j++){
+            System.out.print(" ");
+            }
+        for(int k=1;k<=row;k++){
+            System.out.print("*");
+        }
+        System.out.println(" ");
+    }
+    }
+}
+----------------------------------------------------------------------------
+               * 
+              *** 
+             ***** 
+            ******* 
+
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int row=4;
+        for(int i=1;i<=row;i++)
+        {
+            for(int j=1;j<=row-i;j++)
+            {
+                System.out.print(" ");
+            }
+            for(int k=1;k<=(2*i)-1;k++)
+            {
+                System.out.print("*");
+            }
+            System.out.println(" ");
+        }
+    }
+}
+-------------------------------------------------------------------------------------
+DIAMOND
+   * 
+  *** 
+ ***** 
+******* 
+ ***** 
+  *** 
+   * 
+
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int row=4;
+        for(int i=1;i<row;i++)
+        {
+            for(int j=1;j<=row-i;j++)
+            {
+                System.out.print(" ");
+            }
+            for(int k=1;k<=(2*i)-1;k++)
+            {
+                System.out.print("*");
+            }
+            System.out.println(" ");
+        }
+        for(int i=row;i>=1;i--)
+        {
+            for(int j=1;j<=row-i;j++)
+            {
+                System.out.print(" ");
+            }
+            for(int k=1;k<=(2*i)-1;k++)
+            {
+                System.out.print("*");
+            }
+            System.out.println(" ");
+        }
+    }
+}
+-----------------------------------------------------------
+Sand hour glass
+            *******
+             *****
+              ***
+               *
+              ***
+             *****
+            *******
+
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int row=4;
+         for(int i=row;i>1;i--){
+            for(int k=1;k<=row-i;k++){
+                System.out.print(" ");
+            }
+            for(int j=1;j<=2*i-1;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        for(int i=1;i<=row;i++){
+            for(int k=1;k<=row-i;k++){
+                 System.out.print(" ");
+            }
+            for(int j=1;j<=2*i-1;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    
+    }
+}
+--------------------------------------------------------------
+               * 
+              * * 
+             *   * 
+            ******* 
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int row=4;
+        for(int i=1;i<=row;i++)
+        {
+            for(int k=1;k<=row-i;k++)
+            {
+                System.out.print(" ");
+            }
+            for(int j=1;j<=2*i-1;j++)
+            {
+                if(j==1||j==2*i-1||i==row)
+                {
+                    System.out.print("*");
+                }
+                else
+                {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println(" ");
+        }
+          
+    }
+}
+------------------------------------------------------------------------------------------------------
+                   * 
+                  * * 
+                 *   * 
+                *     * 
+                 *   * 
+                  * * 
+                   * 
+
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int row=4;
+        for(int i=1;i<row;i++)
+        {
+            for(int k=1;k<=row-i;k++)
+            {
+                System.out.print(" ");
+            }
+            for(int j=1;j<=2*i-1;j++)
+            {
+                if(j==1||j==2*i-1)
+                {
+                    System.out.print("*");
+                }
+                else
+                {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println(" ");
+        }
+         for(int i=row;i>=1;i--)
+        {
+            for(int k=1;k<=row-i;k++)
+            {
+                System.out.print(" ");
+            }
+            for(int j=1;j<=2*i-1;j++)
+            {
+                if(j==1||j==2*i-1)
+                {
+                    System.out.print("*");
+                }
+                else
+                {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println(" ");
+        }
+    }
+}
+
+
+
