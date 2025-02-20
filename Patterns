@@ -1,0 +1,30 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Main {
+    public static void main(String[] args) {
+        int n=50;
+        int mid=n/2;
+        for(int i=1;i<=mid;i++)
+        {
+            if(i>5 && i<mid-5){
+                System.out.print(" ");
+            }else{
+                System.out.print("*");
+            }
+
+        }
+        for(int i=1;i<=mid;i++)
+        {
+            if(i>5 && i<mid-5){
+                System.out.print(" ");
+            }else{
+                System.out.print("*");
+            }
+
+        }
+        
+    }
+}
+input: 50
+output: *****              ***********              ******
