@@ -1,0 +1,70 @@
+Factorial :
+import java.util.Scanner;
+
+class Main {
+    public static int factorial(int n) {
+        if (n == 0) {
+            return 1;
+        }
+        return n*factorial(n-1);
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in); 
+        System.out.print("Enter the number: ");
+        int n = sc.nextInt();
+
+        int fact= factorial(n);
+        System.out.println("Factorial of a number: "+fact);
+
+        sc.close();
+    }
+}
+--------------------------------------------------------------------------------
+  2. i/p: string n-123 int k-3    
+  123
+  3
+  o/p:9
+  expl: Sd(p)=sd(123123123)
+  =sd(1+2+3+1+2+3+1+2+3)
+  =sd(18)
+  =sd(1+8)
+  =sd(9)
+  =9
+
+
+import java.util.Scanner;
+
+public class Main {
+    public static int superDigit(String n, int k) {
+        // Convert string to integer sum of digits
+        int sum = 0;
+        for (char digit : n.toCharArray()) {
+            sum += Character.getNumericValue(digit);
+        }
+        
+        // Multiply by k to account for repetition
+        sum *= k;
+        
+        // Base case: If sum has only one digit, return it
+        if (sum < 10) {
+            return sum;
+        }
+        
+        // Recursively call superDigit with the sum converted to a string
+        return superDigit(String.valueOf(sum), 1);
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter number n: ");
+        String n = sc.next();
+        System.out.print("Enter repetition k: ");
+        int k = sc.nextInt();
+
+        int result = superDigit(n, k);
+        System.out.println("Super digit: " + result);
+
+        sc.close();
+    }
+}
